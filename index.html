@@ -1,30 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Portfolio Builder</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Portfolio Builder</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="container">
+    <!-- Builder Section -->
+    <div class="builder" id="builder">
+        <div class="container">
+            <h1>🚀 AI Portfolio Builder</h1>
+            <p class="subtitle">
+                Create your professional portfolio in seconds
+            </p>
 
-    <div class="box">
-        <h2>AI Portfolio Builder</h2>
+            <div class="form-box">
 
-        <input type="text" id="name" placeholder="Full Name">
-        <input type="email" id="email" placeholder="Email">
-        <input type="password" id="password" placeholder="Password">
+                <label>Your Name</label>
+                <input type="text" id="name" placeholder="Enter your full name">
 
-        <button onclick="signup()">Sign Up</button>
+                <label>Introduction</label>
+                <textarea id="intro" placeholder="Write a short introduction about yourself"></textarea>
 
-        <p id="msg"></p>
+                <label>Your Skills</label>
+                <input type="text" id="skills" placeholder="HTML, CSS, JavaScript, Java">
+
+                <label>Your Projects</label>
+                <textarea id="projects" placeholder="Describe your projects"></textarea>
+
+                <label>Your Email</label>
+                <input type="email" id="email" placeholder="example@gmail.com">
+
+                <button onclick="generatePortfolio()">
+                    ✨ Generate My Portfolio
+                </button>
+
+            </div>
+        </div>
     </div>
 
-</div>
 
-<script src="script.js"></script>
+    <!-- Generated Portfolio -->
+    <div class="portfolio" id="portfolio">
+
+        <nav>
+            <div class="logo" id="navName">Portfolio</div>
+
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skillsSection">Skills</a>
+                <a href="#projectsSection">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+
+
+        <!-- Hero -->
+        <section class="hero">
+            <div>
+                <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+
+                <h1>Hello, I'm <span id="portfolioName"></span> 👋</h1>
+
+                <p id="heroIntro"></p>
+
+                <a href="#contact" class="hero-btn">
+                    Contact Me
+                </a>
+            </div>
+        </section>
+
+
+        <!-- About -->
+        <section id="about" class="section">
+            <h2>About Me</h2>
+
+            <div class="card">
+                <p id="aboutText"></p>
+            </div>
+        </section>
+
+
+        <!-- Skills -->
+        <section id="skillsSection" class="section">
+            <h2>My Skills</h2>
+
+            <div class="skills-container" id="skillsContainer"></div>
+        </section>
+
+
+        <!-- Projects -->
+        <section id="projectsSection" class="section">
+            <h2>My Projects</h2>
+
+            <div class="card">
+                <p id="projectsText"></p>
+            </div>
+        </section>
+
+
+        <!-- Contact -->
+        <section id="contact" class="section contact">
+            <h2>Contact Me</h2>
+
+            <p>Interested in working together?</p>
+
+            <a id="emailLink" class="email-btn">
+                📧 Send Me an Email
+            </a>
+        </section>
+
+
+        <footer>
+            <p>
+                © <span id="footerName"></span> | Created with AI Portfolio Builder
+            </p>
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
 
 </body>
 </html>
